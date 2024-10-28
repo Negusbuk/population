@@ -12,7 +12,7 @@ def download():
 
     global filename
     
-    source = 'http://api.worldbank.org/countries/all/indicators/SP.POP.TOTL?downloadformat=csv'
+    source = 'https://api.worldbank.org/v2/en/indicator/SP.POP.TOTL?downloadformat=csv'
     
     with urllib.request.urlopen(source) as response:
         with open(tmpfile.name, mode="wb") as d:
