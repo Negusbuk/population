@@ -49,7 +49,7 @@
     }
   ],
   "title": "Population figures for countries, regions (e.g. Asia) and the world",
-  "version": "2023-03-30",
+  "version": "2023-01-24",
   "views": [
     {
       "name": "world-population-trend",
