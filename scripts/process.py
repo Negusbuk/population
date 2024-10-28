@@ -3,6 +3,7 @@ import os
 import csv
 import tempfile
 import zipfile
+import re
 
 tmpfile = tempfile.NamedTemporaryFile(delete=False, suffix='.zip')
 tmpdir = tempfile.TemporaryDirectory()
@@ -26,7 +27,7 @@ def download():
     for path in os.scandir(tmpdir.name):
         if path.is_file():
             #print(path.name)
-            if path.name.startswith('API_SP.POP.TOTL_DS2_EN'):
+            if re.match('API_SP.POP.TOTL_DS2_en', path.name, re.I):
                 filename = tmpdir.name + '/' + path.name
             
 def process():
